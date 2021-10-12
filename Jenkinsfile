@@ -9,7 +9,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        bat 'dotnet run'
+        bat 'dotnet run --project api-practice'
       }
     }
 
