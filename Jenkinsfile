@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('deploy') {
+      steps {
+        bat 'dotnet run'
+      }
+    }
+
   }
 }
