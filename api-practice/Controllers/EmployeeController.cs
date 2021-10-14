@@ -8,7 +8,7 @@ namespace api_practice.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EmployeeController : ControllerBase
+    public class EmployeesController : ControllerBase
     {
         IList<Employee>
             employees =
