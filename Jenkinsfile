@@ -1,22 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('stop iis') {
       steps {
-        bat 'dotnet build'
         bat 'net stop W3svc'
       }
     }
 
-    stage('deploy') {
+    stage('build') {
       steps {
-        bat 'dotnet publish'
+        bat 'dotnet build'
       }
     }
 
-    stage('restart iis') {
+    stage('publish') {
       steps {
-        bat 'iisreset'
+        bat 'dotnet publish'
       }
     }
 
@@ -25,12 +24,5 @@ pipeline {
         bat 'net start W3svc'
       }
     }
-
-    stage('stop iis') {
-      steps {
-        bat 'net stop W3svc'
-      }
-    }
-
   }
 }
