@@ -65,7 +65,7 @@ namespace api_practice.Controllers
             if (employee == null)
             {
                 // return NotFound();
-                return Ok(employees.FirstOrDefault(e => e.EmployeeId == 1));
+                return Ok(employees.FirstOrDefault(e => e.EmployeeId == 4));
             }
             return Ok(employee);
         }
