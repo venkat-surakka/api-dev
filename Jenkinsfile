@@ -15,7 +15,7 @@ pipeline {
 
     stage('restart iis') {
       steps {
-        bat 'iis reset'
+        bat 'iisreset'
       }
     }
 
