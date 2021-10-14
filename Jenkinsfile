@@ -9,7 +9,13 @@ pipeline {
 
     stage('deploy') {
       steps {
-        bat 'dotnet run --project api-practice'
+        bat 'dotnet publish'
+      }
+    }
+
+    stage('restart iis') {
+      steps {
+        bat 'iis reset'
       }
     }
 
