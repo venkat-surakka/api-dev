@@ -47,7 +47,7 @@ namespace api_practice.Controllers
         }
 
         /// <summary>
-        /// Get the details of a single cylinder
+        /// Get the details of a single Oxygen Cylinder
         /// </summary>
         [HttpGet("{id}")]
         public IActionResult Get(int id)
