@@ -17,21 +17,21 @@ namespace api_practice.Controllers
                     new OxygenCylinder()
                     {
                         Id = 101,
-                        Brand = "EverFlo",
+                        Braand = "EverFlo",
                         Capacity = 14,
                         Price = 59000
                     },
                     new OxygenCylinder()
                     {
                         Id = 102,
-                        Brand = "SimplyGo Mini",
+                        Braand = "SimplyGo Mini",
                         Capacity = 2.7,
                         Price = 280651
                     },
                     new OxygenCylinder()
                     {
                         Id = 103,
-                        Brand = "SimplyGo",
+                        Braand = "SimplyGo",
                         Capacity = 4.5,
                         Price = 172300
                     }
