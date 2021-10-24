@@ -17,7 +17,7 @@ namespace api_practice.Controllers
                     new OxygenCylinder()
                     {
                         Id = 101,
-                        Braand = "EverFlo",
+                        Brand = "EverFlo",
                         Capacity = 14,
                         Price = 59000
                     },
@@ -31,7 +31,7 @@ namespace api_practice.Controllers
                     new OxygenCylinder()
                     {
                         Id = 103,
-                        Braand = "SimplyGo",
+                        Brand = "SimplyGo",
                         Capacity = 4.5,
                         Price = 172300
                     }

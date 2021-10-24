@@ -8,7 +8,7 @@ namespace api_practice.Models
             get;
             set;
         }
-        public string Braand
+        public string Brand
         {
             get;
             set;
