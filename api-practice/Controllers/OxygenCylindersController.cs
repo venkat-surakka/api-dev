@@ -24,7 +24,7 @@ namespace api_practice.Controllers
                     new OxygenCylinder()
                     {
                         Id = 102,
-                        Braand = "SimplyGo Mini",
+                        Brand = "SimplyGo Mini",
                         Capacity = 2.7,
                         Price = 280651
                     },
