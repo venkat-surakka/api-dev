@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Reflection;
 using System.IO;
-
+using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -26,12 +25,17 @@ namespace api_practice
 
             // enable swagger
             // services.AddSwaggerGen();
+            services
+                .AddSwaggerGen(c =>
+                {
+                    var xmlFile =
+                        $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                    var xmlPath =
+                        Path.Combine(AppContext.BaseDirectory, xmlFile);
+                    c.IncludeXmlComments (xmlPath);
+                });
 
-            services.AddSwaggerGen( c=> {
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
-            });
+           services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +66,8 @@ namespace api_practice
                 {
                     endpoints.MapControllers();
                 });
+
+            app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
         }
     }
 }
